@@ -6,12 +6,22 @@ body {
 }
 .container {
     display: grid;
-    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+    grid-template: repeat(4, 100px) / repeat(3, 200px);
     grid-gap: .3rem;
     height: 100vh;
+    justify-content: center;
+    align-content: center;
+    /* start */
+    /* center */
+    /* end */
+    /* stretch */
+    /* space-around */
+    /* space-between */
+    /* space-evenly */
 
-    justify-items: center;    /*Horizontal align*/
-    align-items: center;      /*Vertical align*/
+
+    /* justify-items: center;    Horizontal align */
+    /* align-items: center;      Vertical align */
     /* start = ocupan el ancho de contenido al inicio del elemento*/
     /* end =  ocupan el ancho de contenido al final del elemento */
     /* center = ocupan el ancho de contenido al centro del elemento */
@@ -23,6 +33,6 @@ body {
         border: 1px solid red;
     }
     .item:nth-of-type(5) {
-        align-self: start;
-        justify-self: start;
+        /* align-self: start;
+        justify-self: start; */
     }
