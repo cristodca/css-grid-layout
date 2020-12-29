@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+    .item {
+        background: lightcyan;
+        padding: .5rem;
+        border: 1px solid red;
+    }
