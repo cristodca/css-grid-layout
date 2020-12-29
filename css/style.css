@@ -6,17 +6,9 @@ body {
 }
 .container {
     display: grid;
-    /* grid-template: filas / columnas; */
-     /* fr = Fracciones*/
-    /* repeat(veces, valor); */
-    /* minmax(min, max); */
-    grid-template: 100px 1fr 150px / 200px 1fr;
-    /* grid-gap: filas / columnas; */
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
     grid-gap: .5rem;
-   height: 100vh;
-   grid-template-areas:   "header header" 
-                                    "left contenido"
-                                    "footer footer";
+    height: 100vh;
 }
     .item {
         background: lightcyan;
@@ -24,24 +16,14 @@ body {
         border: 1px solid red;
     }
         /* Toma solo el elemento de ese tipo que especifiquemos */
-        .item:nth-of-type(4) {
+        .item:nth-of-type(1) {
             background: lightseagreen;
-            overflow: auto;
-            display: grid;
-            grid-template: 50px 50px 50px / 200px 200px 200px;
+            grid-column-start: 1;
+            grid-column-end: 3;
         }
-    .item .item {
-        background: lightyellow;
-    }
-    .header {
-        grid-area: header;
-    }
-    .left {
-        grid-area: left;
-    }
-    .contenido {
-        grid-area: contenido;
-    }
-    .footer {
-        grid-area: footer;
-    }
+        .item:nth-of-type(8) {
+            grid-column: 1 / -1;
+        }
+        .item:nth-of-type(7) {
+            grid-column: 2 / 4;
+        }
