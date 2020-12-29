@@ -14,3 +14,13 @@ body {
         padding: .5rem;
         border: 1px solid red;
     }
+        /* Toma solo el elemento de ese tipo que especifiquemos */
+        .item:nth-of-type(4) {
+            background: lightseagreen;
+            overflow: auto;
+            display: grid;
+            grid-template: 50px 50px 50px / 200px 200px 200px;
+        }
+        .item .item {
+            background: lightyellow;
+        }
