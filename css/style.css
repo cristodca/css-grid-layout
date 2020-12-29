@@ -6,8 +6,8 @@ body {
 }
 .container {
     display: grid;
-    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
-    grid-gap: .5rem;
+    grid-template: repeat(2, 200px) / repeat(7, 1fr);
+    grid-gap: .3rem;
     height: 100vh;
 }
     .item {
@@ -17,13 +17,13 @@ body {
     }
         /* Toma solo el elemento de ese tipo que especifiquemos */
         .item:nth-of-type(1) {
-            background: lightseagreen;
-            grid-column-start: 1;
-            grid-column-end: 3;
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 2;
         }
-        .item:nth-of-type(8) {
-            grid-column: 1 / -1;
+        .item:nth-of-type(2) {
+            grid-column: 4 / span 2;
+            grid-row: 1 / span 2;
         }
-        .item:nth-of-type(7) {
-            grid-column: 2 / 4;
+        .item:nth-of-type(3) {
+            grid-column: 6 / span 2;
         }
