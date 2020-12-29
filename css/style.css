@@ -7,9 +7,13 @@ body {
 .container {
     display: grid;
     /* grid-template: filas / columnas; */
-    grid-template: 300px 100px 100px / 50% 200px 100px;
+     /* fr = Fracciones*/
+    /* repeat(veces, valor); */
+    /* minmax(min, max); */
+    grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr));
     /* grid-gap: filas / columnas; */
-    grid-gap: 2rem;
+    grid-gap: .5rem;
+   
 }
     .item {
         background: lightcyan;
