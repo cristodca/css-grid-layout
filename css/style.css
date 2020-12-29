@@ -6,7 +6,8 @@ body {
 }
 .container {
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    /* grid-template: filas / columnas; */
+    grid-template: 300px 100px 100px / 50% 200px 100px;
 }
     .item {
         background: lightcyan;
