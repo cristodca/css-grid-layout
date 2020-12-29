@@ -10,10 +10,13 @@ body {
      /* fr = Fracciones*/
     /* repeat(veces, valor); */
     /* minmax(min, max); */
-    grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr));
+    grid-template: 100px 1fr 150px / 200px 1fr;
     /* grid-gap: filas / columnas; */
     grid-gap: .5rem;
-   
+   height: 100vh;
+   grid-template-areas:   "header header" 
+                                    "left contenido"
+                                    "footer footer";
 }
     .item {
         background: lightcyan;
@@ -27,6 +30,18 @@ body {
             display: grid;
             grid-template: 50px 50px 50px / 200px 200px 200px;
         }
-        .item .item {
-            background: lightyellow;
-        }
+    .item .item {
+        background: lightyellow;
+    }
+    .header {
+        grid-area: header;
+    }
+    .left {
+        grid-area: left;
+    }
+    .contenido {
+        grid-area: contenido;
+    }
+    .footer {
+        grid-area: footer;
+    }
